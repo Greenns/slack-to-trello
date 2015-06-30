@@ -24,7 +24,7 @@ function postToTrello(listId, command, text, cb) {
         'desc' : name_and_desc.shift()
     };
 
-    trello.post('/1/lists/' + listId + '/cards', card_data, cb);
+    // trello.post('/1/lists/' + listId + '/cards', card_data, cb);
 }
 
 function sendNotif(msg) {
@@ -32,6 +32,7 @@ function sendNotif(msg) {
           text: msg,
           channel: getChannel,
           username: 'BugReporter',
+          attachments: '[{"pretext": "test1", "text": "test2"}]',
           icon_url: 'https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/bug.png'
      });
 }
