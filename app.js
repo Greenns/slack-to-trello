@@ -32,7 +32,7 @@ function sendNotif(msg) {
           text: msg,
           channel: getChannel,
           username: 'BugReporter',
-          attachments: [{"pretext": "", "text": "ça commence à prendre forme ! :D", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": ""+ user +"", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
+          attachments: [{"pretext": "", "text": "ça commence à prendre forme ! :D", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "' + user + '", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
           icon_url: 'https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/bug.png'
      });
 }
