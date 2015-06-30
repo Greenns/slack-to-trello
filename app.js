@@ -31,7 +31,8 @@ function sendNotif(msg) {
      slack.send({
           text: msg,
           channel: getChannel,
-          username: 'BugReporter'
+          username: 'BugReporter',
+          icon_url: 'https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/bug.png'
      });
 }
 
