@@ -49,7 +49,7 @@ app.post('/*', function(req, res, next) {
         var url = data.shortUrl;
 
         console.log('> ' + name);
-        sendNotif('['+user+'] ' + name);
+        sendNotif('['+user+'] \n' + name);
 
         res.status(200).send('Bug "' + name + '" signal\351 ici: <' + url + '>');
     });
