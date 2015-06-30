@@ -32,7 +32,7 @@ function sendNotif(msg) {
           text: msg,
           channel: getChannel,
           username: 'BugReporter',
-          attachments: '[{"pretext": "test1", "text": "test2"}]',
+          attachments: [{"pretext": "test1", "text": "test2"}],
           icon_url: 'https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/bug.png'
      });
 }
