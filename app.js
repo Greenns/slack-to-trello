@@ -38,7 +38,8 @@ function sendNotif(msg) {
 app.post('/*', function(req, res, next) {
     var listId = req.params[0];
     var command = req.body.command,
-        text = req.body.text;
+        text = req.body.text,
+        user = req.body.user_name;
 
     postToTrello(listId, command, text, function(err, data) {
         if (err) throw err;
@@ -48,7 +49,8 @@ app.post('/*', function(req, res, next) {
         var url = data.shortUrl;
 
         console.log('> ' + name);
-        sendNotif('Bug: ' + name);
+        sendNotif('['+user+'] ' + name);
+
         res.status(200).send('Bug "' + name + '" signal\351 ici: <' + url + '>');
     });
 });
