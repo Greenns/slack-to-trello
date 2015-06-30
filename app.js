@@ -24,7 +24,7 @@ function postToTrello(listId, command, text, cb) {
         'desc' : name_and_desc.shift()
     };
 
-    // trello.post('/1/lists/' + listId + '/cards', card_data, cb);
+    trello.post('/1/lists/' + listId + '/cards', card_data, cb);
 }
 
 function sendNotif(msg) {
