@@ -1,7 +1,7 @@
 {
   "name": "Slack to Trello card creation",
   "description": "Enable Trello card creation from Slack",
-  "repository": "https://github.com/supportkit/slack-to-trello",
+  "repository": "https://github.com/Greenns/slack-to-trello/",
   "keywords": ["slack", "trello", "javascript", "heroku"],
   "env": {
     "TRELLO_KEY" : {
@@ -10,6 +10,14 @@
     },
     "TRELLO_TOKEN": {
       "description": "trello token",
+      "required": true
+    },
+    "SLACK_HOOK_URL": {
+      "description": "slack webhook url",
+      "required": true
+    },
+    "SLACK_CHANNEL": {
+      "description": "slack chanel",
       "required": true
     }
   }

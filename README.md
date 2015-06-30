@@ -1,8 +1,13 @@
-# slack-to-trello
-Create Trello cards using Slack.
+**Slack to Trello**
+=======
 
-This code sets up a nodejs backend that responds to your Trello Slash Command from Slack, and calls the Trello API to create a new card. Check out [http://blog.supportkit.io/slack-to-trello/](http://blog.supportkit.io/slack-to-trello/) for full instructions.
+Create Trello cards using Slack !
 
-To deploy this for free on Heroku, click this button:
+Fork ♥ [SupportKit.oi](http://supportkit.io)
+
+**[Slack](slack.com)**: Be less busy
+**[Trello](trello.com)**: Keeps track of everything
+
+Deploy on Heroku now !
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
