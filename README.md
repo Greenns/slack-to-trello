@@ -5,8 +5,11 @@ Create Trello cards using Slack !
 
 Fork ♥ [SupportKit.oi](http://supportkit.io)
 
+
 **[Slack](slack.com)**: Be less busy
+
 **[Trello](trello.com)**: Keeps track of everything
+
 
 Deploy on Heroku now !
 
