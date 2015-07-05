@@ -33,7 +33,7 @@ app.post('/*', function(req, res, next) {
         username = req.body.user_name;
 });
 
-function sendNotif(msg) {
+function sendNotif(msg, username) {
      slack.send({
           text: msg,
           channel: getChannel,
