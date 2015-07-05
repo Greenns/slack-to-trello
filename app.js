@@ -28,12 +28,18 @@ function postToTrello(listId, command, text, cb) {
 }
 
 function sendNotif(msg) {
-    username = req.body.user_name;
+    
+    app.post('/*', function(req, res, next) {
+    var listId = req.params[0];
+    var command = req.body.command,
+        username = req.body.user_name;
+    });
+        
      slack.send({
           text: msg,
           channel: getChannel,
           username: 'UHBot',
-           attachments: [{"pretext": "Nouveau bug signalé :", "text": "Joueur1 peut tuer Joueur2", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "-" + username + "-", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
+          attachments: [{"pretext": "Nouveau bug signalé :", "text": "Joueur1 peut tuer Joueur2", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "-" + username + "-", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
           icon_url: 'http://img15.hostingpics.net/pics/834337TechnicalSupport64.png'
      });
 }
