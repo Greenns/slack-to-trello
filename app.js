@@ -27,13 +27,7 @@ function postToTrello(listId, command, text, cb) {
     trello.post('/1/lists/' + listId + '/cards', card_data, cb);
 }
 
-app.post('/*', function(req, res, next) {
-    var listId = req.params[0];
-    var command = req.body.command,
-        username = req.body.user_name;
-});
-
-function sendNotif(msg, username) {
+function sendNotif(msg, user) {
      slack.send({
           text: msg,
           channel: getChannel,
