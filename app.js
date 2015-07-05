@@ -32,7 +32,7 @@ function sendNotif(msg, user) {
           text: msg,
           channel: getChannel,
           username: 'UHBot',
-          attachments: [{"pretext": "Nouveau bug signalé :", "text": "Joueur1 peut tuer Joueur2", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "-" + user + "-", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
+          attachments: [{"pretext": "Nouveau bug signalé :", "text": "Joueur1 peut tuer Joueur2", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "" + user + "", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
           icon_url: 'http://img15.hostingpics.net/pics/834337TechnicalSupport64.png'
      });
 }
@@ -51,7 +51,7 @@ app.post('/*', function(req, res, next) {
         var url = data.shortUrl;
 
         console.log('> ' + name);
-        sendNotif('['+user+'] \r\n' + name, '-'+ user +'-');
+        sendNotif('['+user+'] \r\n' + name, ''+ user +'');
 
         res.status(200).send('Bug "' + name + '" signal\351 ici: <' + url + '>');
     });
