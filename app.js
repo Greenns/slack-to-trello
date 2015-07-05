@@ -29,10 +29,10 @@ function postToTrello(listId, command, text, cb) {
 
 function sendNotif(msg, user) {
      slack.send({
-          text: msg,
+          text: '',
           channel: getChannel,
           username: 'UHBot',
-          attachments: [{"pretext": "Nouveau bug signalé :", "text": "Joueur1 peut tuer Joueur2", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "" + user + "", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
+          attachments: [{"pretext": "Nouveau bug signalé :", "text": "" + msg + "", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "" + user + "", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
           icon_url: 'http://img15.hostingpics.net/pics/834337TechnicalSupport64.png'
      });
 }
