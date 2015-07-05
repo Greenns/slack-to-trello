@@ -29,7 +29,7 @@ function postToTrello(listId, command, text, cb) {
 
 function sendNotif(msg, user) {
      slack.send({
-          text: '',
+          text: msg,
           channel: getChannel,
           username: 'UHBot',
           attachments: [{"pretext": "Nouveau bug signalé :", "text": "" + msg + "", "color":"#F35A00", "fields": [{"title": "Signalé par:", "value": "" + user + "", "short": "false"}, {"title": "Priorité:", "value": "Indéterminé", "short": "false"}]}],
@@ -51,7 +51,7 @@ app.post('/*', function(req, res, next) {
         var url = data.shortUrl;
 
         console.log('> ' + name);
-        sendNotif('['+user+'] \r\n' + name, ''+ user +'');
+        sendNotif(name, user);
 
         res.status(200).send('Bug "' + name + '" signal\351 ici: <' + url + '>');
     });
