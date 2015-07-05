@@ -28,6 +28,7 @@ function postToTrello(listId, command, text, cb) {
 }
 
 function sendNotif(msg) {
+    username = req.body.user_name;
      slack.send({
           text: msg,
           channel: getChannel,
